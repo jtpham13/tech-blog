@@ -78,9 +78,15 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login');
+  res.render('login'); 
 });
 
-
-
+// create route for sign up
+router.get('/signup', (req, res) => {
+   try {
+  res.render("signup");
+   } catch (err) {
+    res.status(500).json(err);
+   }
+});
 module.exports = router;
