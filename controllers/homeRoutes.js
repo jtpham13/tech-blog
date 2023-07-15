@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
-const raceTheTurtle = require('../utils/randomRaceTurtle');
+// const raceTheTurtle = require('../utils/randomRaceTurtle');
 
 router.get('/', async (req, res) => {
   try {
@@ -81,10 +81,10 @@ router.get('/login', (req, res) => {
 });
 
 
-router.get('/race-turtle', raceTheTurtle, (req, res) => {
-  console.log(req.turtle);
-  // res.json(req.turtle);
-  res.render("turtle", req.turtle);
-});
+// router.get('/race-turtle', raceTheTurtle, (req, res) => {
+//   console.log(req.turtle);
+//   // res.json(req.turtle);
+//   res.render("turtle", req.turtle);
+// });
 
 module.exports = router;
