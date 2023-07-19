@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Post, User, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 // const raceTheTurtle = require('../utils/randomRaceTurtle');
 
@@ -37,6 +37,10 @@ router.get('/post/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        {
+          model: Comments,
+          include: [{model:User}]
+        }
       ],
     });
 
