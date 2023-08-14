@@ -24,9 +24,9 @@ npm i express-session
 
 
 ## Usage
+<img src="https://github.com/jtpham13/tech-blog/blob/main/assets/techblog.png"/>
 
-
-
+[Click here for deployed app](https://mvc-jp-14a5f9d680b3.herokuapp.com/)
 
 ## License 
 
